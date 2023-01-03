@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/en_83c.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+                <a href="index.html"><img src="pic/en_83c.png" width="50px" ,height="50px"></a>
+                <div class="slogan">
+                    <a href="index.html">VŨ RESTAURANT</a>
+                </div>
+            </div>
+            <div id="mainmenu">
+                <div class="menu"> <a href="index.html">Trang chủ</a></div>
+                <div class="menu"> <a href="#a">Sản phẩm</a></div>
+                <div class="menu"> <a href="index.html">Blog</a></div>
+                <div class="menu"> <a href="index.html">Về chúng tôi</a></div>
+                <div class="menu">
+                    <ul>
+                        <div><a href="index.html">Liên hệ</a></div>
+                        <li>
+                            <div><a href="">>TT CSKH</a></div>
+                            <div><a href="">>ĐẶT HÀNG SỐ LƯỢNG LỚN</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="guest">
+                <div class="item">
+                    <img src="pic/cart.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="pic/user.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--het main menu-->
+
+    <div class="slideshow-container">
+
+        <div class="mySlides">
+            <img src="pic/BANNER.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="pic/BANNER (2).jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="pic/BANNER (3).jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="pic/BANNER (4).jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlide() {
+            plusSlides(1);
+        }
+        setInterval(plusSlide, 3000);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+
+    </script>
+
+    <!--het banner 1-->
+
+    <br>
+    <div id="a"></div>
+    <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+
+    <div class="products-container">
+
+        <div class="myProducts">
+            <div class="list-products">
+
+                <div class="item">
+                    <img src="pic/BEEF WELLINGTON EXPERIENCE.jpg" alt="">
+                    <div class="name">BEEF WELLINGTON EXPERIENCE</div>
+                    <div class="desc">Ăn không ngon vẫn lấy tiền</div>
+                    <div class="price">100.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/3 COURSE MEAL CLASSIC.jpg" alt="">
+                    <div class="name">3 COURSE MEAL CLASSIC</div>
+                    <div class="desc">Ăn không ngon vẫn lấy tiền</div>
+                    <div class="price">200.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/CHAMPAGNE & SHELLFISH PLATTER.jpg" alt="">
+                    <div class="name">CHAMPAGNE & SHELLFISH PLATTER</div>
+                    <div class="desc">Ăn không ngon vẫn lấy tiền</div>
+                    <div class="price">300.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/COCKTAIL MASTERCLASS.jpg" alt="">
+                    <div class="name">COCKTAIL MASTERCLASS</div>
+                    <div class="desc">Ăn không ngon vẫn lấy tiền</div>
+                    <div class="price">400.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/PRESTIGE MENU AT PÉTRUS.jpg" alt="">
+                    <div class="name">PRESTIGE MENU AT PÉTRUS</div>
+                    <div class="desc">Ăn không ngon vẫn lấy tiền</div>
+                    <div class="price">500.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/RARE-BREED STEAK.jpg" alt="">
+                    <div class="name">RARE-BREED STEAK</div>
+                    <div class="desc">Ăn không ngon vẫn lấy tiền</div>
+                    <div class="price">600.000 VNĐ</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="myProducts">
+            <div class="list-products">
+
+                <div class="item">
+                    <img src="pic/3 COURSE MEAL CLASSIC.jpg" alt="">
+                    <div class="name">3 COURSE MEAL CLASSIC</div>
+                    <div class="desc">Ăn ngon mới lấy tiền</div>
+                    <div class="price">700.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/RARE-BREED STEAK.jpg" alt="">
+                    <div class="name">RARE-BREED STEAK</div>
+                    <div class="desc">Ăn ngon mới lấy tiền</div>
+                    <div class="price">1.100.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/BEEF WELLINGTON EXPERIENCE.jpg" alt="">
+                    <div class="name">BEEF WELLINGTON EXPERIENCE</div>
+                    <div class="desc">Ăn ngon mới lấy tiền</div>
+                    <div class="price">1.200.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/CHAMPAGNE & SHELLFISH PLATTER.jpg" alt="">
+                    <div class="name">CHAMPAGNE & SHELLFISH PLATTER</div>
+                    <div class="desc">Ăn ngon mới lấy tiền</div>
+                    <div class="price">800.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/COCKTAIL MASTERCLASS.jpg" alt="">
+                    <div class="name">COCKTAIL MASTERCLASS</div>
+                    <div class="desc">Ăn ngon mới lấy tiền</div>
+                    <div class="price">900.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/PRESTIGE MENU AT PÉTRUS.jpg" alt="">
+                    <div class="name">PRESTIGE MENU AT PÉTRUS</div>
+                    <div class="desc">Ăn ngon mới lấy tiền</div>
+                    <div class="price">1.000.000 VNĐ</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="myProducts">
+            <div class="list-products">
+
+                <div class="item">
+                    <img src="pic/COCKTAIL MASTERCLASS.jpg" alt="">
+                    <div class="name">COCKTAIL MASTERCLASS</div>
+                    <div class="desc">ăn ngon không lấy tiền</div>
+                    <div class="price">1.700.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/PRESTIGE MENU AT PÉTRUS.jpg" alt="">
+                    <div class="name">PRESTIGE MENU AT PÉTRUS</div>
+                    <div class="desc">ăn ngon không lấy tiền</div>
+                    <div class="price">1.800.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/RARE-BREED STEAK.jpg" alt="">
+                    <div class="name">RARE-BREED STEAK</div>
+                    <div class="desc">ăn ngon không lấy tiền</div>
+                    <div class="price">1.500.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/BEEF WELLINGTON EXPERIENCE.jpg" alt="">
+                    <div class="name">BEEF WELLINGTON EXPERIENCE</div>
+                    <div class="desc">ăn ngon không lấy tiền</div>
+                    <div class="price">1,500.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/3 COURSE MEAL CLASSIC.jpg" alt="">
+                    <div class="name">3 COURSE MEAL CLASSIC</div>
+                    <div class="desc">ăn ngon không lấy tiền</div>
+                    <div class="price">1.600.000 VNĐ</div>
+                </div>
+
+                <div class="item">
+                    <img src="pic/CHAMPAGNE & SHELLFISH PLATTER.jpg" alt="">
+                    <div class="name">CHAMPAGNE & SHELLFISH PLATTER</div>
+                    <div class="desc">ăn ngon không lấy tiền</div>
+                    <div class="price">1.300.000 VNĐ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="list-page">
+        <div class="page" onclick="currentProducts(1)">
+            <p>
+                << </p>
+        </div>
+        <div class="page" onclick="plusProducts(-1)">
+            <p>
+                < </p>
+        </div>
+        <div class="page" onclick="currentProducts(1)">
+            <p>1</p>
+        </div>
+        <div class="page" onclick="currentProducts(2)">
+            <p>2</p>
+        </div>
+        <div class="page" onclick="currentProducts(3)">
+            <p>3</p>
+        </div>
+        <div class="page" onclick="plusProducts(1)">
+            <p>></p>
+        </div>
+        <div class="page" onclick="currentProducts(3)">
+            <p>>></p>
+        </div>
+    </div>
+    <script>
+        let productsIndex = 1;
+        showProducts(productsIndex);
+        function plusProducts() {
+            plusProducts(1);
+        }
+
+        function plusProducts(n) {
+            showProducts(productsIndex += n);
+        }
+
+        function currentProducts(n) {
+            showProducts(productsIndex = n);
+        }
+
+        function showProducts(n) {
+            let j;
+            let products = document.getElementsByClassName("myProducts");
+            let pages = document.getElementsByClassName("page");
+            if (n > products.length) { productsIndex = 1 }
+            if (n < 1) { productsIndex = products.length }
+            for (j = 0; j < products.length; j++) {
+                products[j].style.display = "none";
+            }
+            for (j = 0; j < pages.length; j++) {
+                pages[j].className = pages[j].className.replace(" act", "");
+            }
+            products[productsIndex - 1].style.display = "block";
+            pages[productsIndex + 1].className += " act";
+        }
+
+
+    </script>
+
+
+
+    <!--het main content-->
+
+    <div id="footer">
+        <div class="box">
+            <div class="logo">
+                <img style="height:96px;width:69;" src="pic/cg_adice.png" alt="">
+            </div>
+            <p>VŨ RESTAURANT <br> Cơm ngon 100% no fake</p>
+        </div>
+        <div class="contact">
+            <h3>LIÊN HỆ</h3>
+            <form action="">
+                <input type="text" placeholder="Địa chỉ email">
+                <button>Nhận tin</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
